@@ -2,8 +2,8 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:                <Hangeol> <Chang>
-  email:               <hgchang1@naver.com>
+  name:                Hangeol Chang
+  email:               hgchang1@naver.com
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
@@ -22,14 +22,14 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
-    github:          <Hangeol-Chang>
-    email:           <hgchang1@naver.com>
+    # twitter:         <username>
+    github:          Hangeol-Chang
+    email:           hgchang1@naver.com
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
     # vk:              <username>
-    youtube:         <UCFHxE7grCP07kWQqkZYuf9A>
+    youtube:         UCFHxE7grCP07kWQqkZYuf9A
     # vimeo:           <username>
     # vine:            <username>
     # spotify:         <user>/<number>
@@ -43,7 +43,7 @@ author1:
     # deviantart:      <username>
     # ello:            <username>
     # twitch:          <username>
-    steam:           <76561198037317831>
+    steam:           76561198037317831
     # reddit:          <username>
     # tumblr:          <username>
     # pinterest:       <username>

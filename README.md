@@ -20,3 +20,12 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 ## Learning
 
 ###### 나는 이 블로그의 구조를 이해하기 위해 열심히 노력중이다. 절대 놀고 있는 것이 아니다.
+
+
+
+
+
+## Todo
+
+- 이미지들 전부 대체하기.
+- 공식문서 읽으면서, 필요없는 문서들 하나하나 지워가기.
