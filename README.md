@@ -13,7 +13,11 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 
 `cd documents/Github/Hangeol-chang.github.io`
 
-`bundle install` `bundle exec jekyll serve`
+`bundle install` 
+
+`bundle exec jekyll serve`
+
+ http://127.0.0.1:4000
 
 
 
@@ -22,6 +26,16 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 ###### 나는 이 블로그의 구조를 이해하기 위해 열심히 노력중이다. 절대 놀고 있는 것이 아니다.
 
 
+
+#### IMG
+
+- 이미지 가져올 때, 깃허브 주소로 가져옴.
+
+
+
+#### data
+
+- 사이드바에 들어가는 것들이나, yml에서 객체형태로 작성하는 것들의 약어가 들어가 있음.
 
 
 
