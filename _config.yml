@@ -19,7 +19,7 @@
 lang:                  ko
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 hihangeol`s azit
+title:                 hihangeol`s  
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -28,7 +28,7 @@ description:           >
   재밌어보이면 앞뒤 안가리고 도전합니다.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               개발자 안녕한걸입니다.
 
 # A list of keywords for your blog
 keywords:              [유니티, 개발, 게임, c#, java]
@@ -54,6 +54,10 @@ menu:
     url:               /docs/
   - title:             About
     url:               /about/
+  - title:             Portfolio
+    url:               /Portfolio/
+  - title:             Life
+    url:               /life/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -95,9 +99,9 @@ accent_color:          rgb(79,177,186)
 # Defaults to `accent_color`.
 theme_color:           rgb(25,55,71)
 
+# 폰트
 # The string encoding which fonts to fetch from Google Fonts.
-# See: <https://hydejack.com/docs/configuration/>
-google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i|IBM+Plex+Sans+KR:200,300,400,500
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
