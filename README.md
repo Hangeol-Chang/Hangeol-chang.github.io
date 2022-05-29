@@ -29,3 +29,10 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 
 - 이미지들 전부 대체하기.
 - 공식문서 읽으면서, 필요없는 문서들 하나하나 지워가기.
+
+- 태그 만들기.
+
+
+
+- 백준 문제풀이 글들 옮겨오기
+- 티스토리에 있는 글들 이식.
