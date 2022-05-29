@@ -1,9 +1,8 @@
 # Config
 # ========================================================================================
 
-# Uncomment and set the URL of your site (with protocol, e.g. `https://`)
-# NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# url:                   https://username.github.io
+# Uncomment and set the URL of your site (with protocol, e.g. `https://hangeol-chang.github.io`)
+# url:                   https://hangeol-chang.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -17,22 +16,22 @@
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  ko
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Starter Kit
+title:                 hihangeol`s azit
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  안녕하세요. 개발자 안녕한걸입니다. 게임 만드는 것 좋아합니다.
+  재밌어보이면 앞뒤 안가리고 도전합니다.
 
 # A shorter description for the sidebar.
 tagline:               Change `tagline` in `_config.yml`
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              [유니티, 개발, 게임, c#, java]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -42,8 +41,8 @@ logo:                  /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                <Hangeol> <Chang>
+  email:               <hgchang1@naver.com>
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
