@@ -39,6 +39,15 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 
 
 
+#### 글 연결하기
+
+- *[name]{:.heading.flip-title} 해 놓고,
+  밑에 [name]: 연결할 파일 명.md 로 하기.
+
+
+
+
+
 ## Todo
 
 - 이미지들 전부 대체하기.
