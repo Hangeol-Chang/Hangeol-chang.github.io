@@ -46,6 +46,10 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 
 
 
+#### 메인 페이지?
+
+기본적으로 최근 쓴 글들이 보이는데, 어케 바꿀 방법 없으까??
+
 
 
 ## Todo
