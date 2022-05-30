@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Burn Protection 
+title: Burn Protection Method
 description: >
   This chapter covers the basics of content creation with Hydejack.
 hide_description: true
