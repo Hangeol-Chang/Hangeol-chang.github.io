@@ -7,32 +7,36 @@ hide_description: true
 sitemap: false
 ---
 
-This chapter covers the basics of content creation with Hydejack.
+
 
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-## About
+# About
 
-이 페이지는 '사이버-물리 시스템을 이용한 영유아의 화상방지 알고리즘 및 스마트밴드' 연구에 대해 논문에 등재된 연구 결과 및 작동 방식과,<br>
-
-논문에 등재되지 않은 연구, 개발 과정에 대한 세부적인 사항을 포함하고 있습니다.
+이 페이지는 **'사이버-물리 시스템을 이용한 영유아의 화상방지 알고리즘 및 스마트밴드'** 연구에 대해 논문에 등재된 연구 결과 및 작동 방식과, 논문에 등재되지 않은 연구 개발 과정에 대한 세부적인 사항을 포함하고 있습니다.
 
 
 
-## Abstract
+[논문링크]{:.heading.flip-title}
 
-In this research, a new protocol and bracelet-type device for infants to prevent unwanted burn accidents in daily life are presented. The Korea Disease Control and Prevention Agency said that 26.9% of burn accidents often occur to children under four-year-old and 65.9% of those occur at home in the past decade. In this preliminary study, a bracelet-type device was developed to detect whenever a child is getting close to any heat source in a controlled manner. Once the child was at risk of unwanted contact with heat source, then a modified cyber physical system(CPS) would generate an alarming sound that can help move the child away from the heat source. In addion, the alarming signals will also be sent to parents' smartphone apps and help them protect their children. We believe this approach can be beneficial for development of a CPS-homecare system at pandemic era.
+[논문링크]: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10609420
+
+
+
+# Abstract
+
+이 연구는 일상생활에서 영유아의 화상을 방지하기 위한 새로운 알고리즘을 제안한다. 최근 3년동안 일어난 화상사고의 26.9%가 4세 이하의 영유아에게서 발생하였고, 이중 65.9%가 집안에서 발생하였다. 따라서, 본 연구는 팔찌형 장치를 이용하여 아이가 열원에 접근하는지를 판단하며, 아이가 열원에 접근하여 화상을 당할 수 있는 상황이 발생하면, 첫 번째로 사이버-물리 시스템을 이용하여 열원과 먼 곳에서 발생되는 소리로 아이를 열원에서 멀어지게 하고, 두 번째로 보호자의 휴대폰으로 알람을 보내어 2중으로 자녀를 보호하도록 한다.
 
 
 
 ## 연구 목적
 
+ 영유아시기에 발생하는 화상 사고는, 영구적인 상흔을 남기는 사고가 많은 만큼 치명적이다.
 
 
 
-
-## 사용된 기술
+## 기술 설명
 
 ### 화상방지 알고리즘
 

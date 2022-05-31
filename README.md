@@ -103,7 +103,7 @@ hide_last_modified: true
 *[HTML] : 위에 쓴 것에 설명을 달 수 있음.
 
 <!-- 파일 연결 -->
-*[name]{:.heading.flip-title} 해 놓고,
+[name]{:.heading.flip-title} 해 놓고,
 [name]: 연결할 파일 명.md
 
 
