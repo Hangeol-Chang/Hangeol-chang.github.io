@@ -32,6 +32,7 @@ permalink: /portfolio/
 ### 사용 기술
 - Arduino (c++)
 - mlx90640
+- MIT APP Inventor
 - 3D 프린트
 
 일부 모델링 기술들은 본인의 분야가 아니었기 때문에 일부 생략합니다.
@@ -112,7 +113,7 @@ permalink: /portfolio/
 
 
 
-
+---
 
 
 #### 자세히 보기
@@ -144,6 +145,8 @@ permalink: /portfolio/
 ### 기술 개요
 
 
+
+---
 
 
 #### 자세히 보기
