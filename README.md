@@ -1,13 +1,12 @@
-# Hydejack Starter Kit
+### About
 
-A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
+안녕한걸의 개인 블로그 입니다.
 
-## Quick Start
-### Running locally
-1. Clone repository (git users), or [download] and unzip.
-2. Open terminal, `cd` into root directory (where `_config.yml` is located)
-3. Run `bundle install` [^1]
-4. Run `bundle exec jekyll serve`
+**Hydejack** 테마를 사용하여 제작되었습니다.
+
+이 밑에는 그냥 제가 이것저것 수정해 보면서 적어놓은 것들입니다.
+
+
 
 ## 시작
 
@@ -21,15 +20,103 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 
 
 
+# 구성
+
+#### Portfolio
+
+#### Life
+
+- life
+- it
+
+#### Develop
+
+- Solving
+  백준, SWEA 등의 문제풀이 페이지.
+- Studing
+
+#### Learning
+
+- 기계기사 등 개인적인 공부내용
+
+#### SSAFY
+
+
+
+### 글 작성
+
+#### 제목 양식
+
+```
+2012-02-07-제목-띄어쓰기는-하이픈으로
+```
+
+#### 글 머리
+
+```
+---
+layout: post
+title: Example Content
+description: >
+  description 안써도 됨.
+image: 
+  path: /assets/img/blog/example-content-iii.jpg
+  srcset:
+    1060w: /assets/img/blog/example-content-iii.jpg
+    530w:  /assets/img/blog/example-content-iii@0,5x.jpg
+    265w:  /assets/img/blog/example-content-iii@0,25x.jpg
+related_posts:
+  - example/_posts/2017-11-23-example-content-ii.md
+  - /example/2012-02-07-example-content/
+sitemap: false
+hide_last_modified: true
+---
+```
+
+```
+---
+layout: post
+title: Example Content
+sitemap: false
+hide_last_modified: true
+---
+```
+
+
+
+#### 글에 쓰는 양식들
+
+```markdown
+0.
+{:.}
+
+이렇게 쓰면 글이 회색이 됨.
+{:.faded}
+
+![img](https://이미지 주소)
+{:.lead width="800" height="100"}
+<!-- 이미지의 가로, 세로 지정 -->
+
+큰 인용구
+{:.lead}
+
+*[HTML] : 위에 쓴 것에 설명을 달 수 있음.
+```
+
+
+
+
+
+
+
 ## Learning
 
-###### 나는 이 블로그의 구조를 이해하기 위해 열심히 노력중이다. 절대 놀고 있는 것이 아니다.
+#### 알아낸 것들
 
-
-
-#### IMG
-
-- 이미지 가져올 때, 깃허브 주소로 가져옴.
+- 서브폴더는 불가능함.
+  하려면, 블로그를 hy 메인 깃허브로부터 완전 분리시켜야 됨.
+  - but, 글 안에 링크로 이동시킬 순 있을듯.
+- 글 제목에 한글이 있으면 안됨.
 
 
 

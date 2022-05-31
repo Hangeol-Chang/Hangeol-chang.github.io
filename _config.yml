@@ -52,8 +52,14 @@ menu:
     url:               /Portfolio/
   - title:             Life
     url:               /life/
-  - title:             Example
-    url:               /example/
+  - title:             Develop
+    url:               /develop/
+  - title:             Learning
+    url:               /learning/
+  - title:             SSAFY
+    url:               /ssafy/
+  - title:             Game
+    url:               /game/
   - title:             Documentation
     url:               /docs/
   - title:             About
