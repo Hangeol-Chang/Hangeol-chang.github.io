@@ -101,6 +101,12 @@ hide_last_modified: true
 {:.lead}
 
 *[HTML] : 위에 쓴 것에 설명을 달 수 있음.
+
+<!-- 파일 연결 -->
+*[name]{:.heading.flip-title} 해 놓고,
+[name]: 연결할 파일 명.md
+
+
 ```
 
 
@@ -123,13 +129,6 @@ hide_last_modified: true
 #### data
 
 - 사이드바에 들어가는 것들이나, yml에서 객체형태로 작성하는 것들의 약어가 들어가 있음.
-
-
-
-#### 글 연결하기
-
-- *[name]{:.heading.flip-title} 해 놓고,
-  밑에 [name]: 연결할 파일 명.md 로 하기.
 
 
 
