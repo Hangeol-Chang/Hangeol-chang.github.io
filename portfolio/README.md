@@ -23,7 +23,7 @@ permalink: /portfolio/
 
 #### Intro
 이 프로젝트는 2020.09 ~ 2021.11 까지 진행된 프로젝트로, 영유아의 화상을 방지하고,
-더 나아가 이를 구현한 열원 접근 감지 프로토콜을 배포함으로써, 다양한 화상의 위험이 있는 환경에서 
+더 나아가 이를 구현한 열원 접근 감지 프로토콜을 배포함으로써, 다양한 화상의 위험이 있는 환경에서 활용되어 화상 위험을 방지하는 것을 목표로 한다.
 
 <center>
 <img src="../assets/img/portfolio/Burn_Protection_Method/exploded.png" width="300">
@@ -33,6 +33,11 @@ permalink: /portfolio/
 - Arduino
 - [mlx90640]
 - 3D 프린트
+
+일부 모델링 기술들은 본인의 분야가 아니었기 때문에 일부 생략합니다.
+{:.note}
+
+
 
 
 
