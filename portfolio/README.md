@@ -8,7 +8,6 @@ sitemap: false
 permalink: /portfolio/
 ---
 
-
 안녕하세요. 경희대학교 기계공학과를 졸업하고, SSAFY에서 개발 공부를 진행중인 장한걸입니다.<br>
 이 페이지에는 제가 살면서 진행해 온 프로젝트나, 개인작들이 포함되어 있습니다.<br>
 각 프로젝트에 대한 요약과 간략한 설명으로 이루어져 있으며, 자세한 사항은 각 항목마다 링크로 연결되어 있습니다.<br>
@@ -30,14 +29,16 @@ permalink: /portfolio/
 <img src="../assets/img/portfolio/Burn_Protection_Method/exploded.png" width="300">
 </center>
 
-### 사용 기슬
+### 사용 기술
 - Arduino
-- 
+- [mlx90640]
+- 3D 프린트
 
 
-간단한 설명.
-링크
-엥 이거 줄바꿈이 안되냐?
+
+
+
+---
 
 * [detail_Burn_Protection_Method]{:.heading.flip-title} --- 자세히 보기
 * [Github_Burn_Protection_Method]{:.heading.flip-title} --- 프로젝트 깃허브
@@ -53,3 +54,7 @@ permalink: /portfolio/
 이 프로젝트는, 1993년도 게임 Hexxagon을 모바일로 이식하는 것을 목표로 시작한 개인프로젝트로,<br>
 개발 당시에도 동일한 게임이 모바일에 존재하였으나, 애니메이션의 부재, 디자인, 3인 모드의 부재 등의 아쉬움을 채우기 위해<br>
 개발하게 되었습니다.
+
+
+
+*[mlx90640]: 열화상 카메라

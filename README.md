@@ -88,7 +88,7 @@ hide_last_modified: true
 
 ```markdown
 0.
-{:.}
+{:toc}
 
 이렇게 쓰면 글이 회색이 됨.
 {:.faded}
