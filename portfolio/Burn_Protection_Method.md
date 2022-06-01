@@ -79,6 +79,59 @@ sitemap: false
 
 
 
+###### 배열 인덱싱
+
+데이터 가공을 위해, 1차원으로 들어오는 온도 배열을 32 * 24로 변환해야 했으며, 주변부에 5를 체크하기 위해 이 데이터를 34 * 26 크기의 배열의 중앙에 입력해야 했다. 32 * 24 배열을 만든 뒤 옮기면 간단하지만, 한정된 아두이노의 메모리를 최대한 절약하기 위해 직접 34 * 26 (884크기의 1차원 배열)크기의 배열에 데이터를 입력하였다. 아래는 이와 관련된 코드이다.
+
+```c++
+for( int pixelNumber = 0; pixelNumber < 768; pixelNumber++)
+    {
+        {
+            /*
+            온도 전처리 과정 생략.
+            To가 온도 변수
+            */
+
+            if (To < dngtemp) {
+              if     (result[loc - 1 ] == 1 ) { result[loc] = 3; countb++; }
+              else if(result[loc - 34] == 1 ) { result[loc] = 3; countb++; }
+              else                            { result[loc] = 0; }
+            }
+            else {
+              countA ++;
+              if(result[loc] == 3) countb --;
+              result[loc] = 1;
+
+              coordinatetmploc[pointer] = (pixelNumber + 1) % 32;
+              pointer++;
+              
+              if(result[loc - 34] == 0 ) { result[loc - 34] = 3; countb++; }
+              if(result[loc - 1 ] == 0 ) { result[loc - 1 ] = 3; countb++; }
+            } 
+
+            if((pixelNumber + 1) % 32 == 0) { 
+              if(pointer != 0) {
+                int tmpsum = 0;
+                for (int t = 0; t < pointer; t++){
+                  tmpsum += coordinatetmploc[t];
+                }
+                // 각 열에서 열원 위치의 합
+                coordinatetmp[row][0] = tmpsum;
+                // 각 열에서 열원의 개수
+                coordinatetmp[row][1] = pointer;
+              }
+              else {
+                coordinatetmp[row][0] = 0;
+                coordinatetmp[row][1] = 0;
+              }
+              row++; pointer = 0;
+            }
+        }
+    }
+```
+
+ 
+
 #### 위험 판단 기준.
 
 위에서 계산한 값들을 이용하여, 착용자가 열원에 접근하는지를 판단하기 위해 아래와 같이 입실론을 정의한다.<br>
@@ -161,6 +214,29 @@ $$
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/detectTest.png?raw=true" width="600">
 </center>
 
+```c++
+if(countA >= 1){
+    coordinate[2] = countA;
+    corfac = (float)countb / (float)countA;
+    
+    // 비왜곡형태
+    if( 7*pow(countA,0.43) > corfac >= 4*pow(countA,0.5) ) { 
+        corfac = 0; 
+    }
+    // 저왜곡형태
+    else if( 10*pow(countA,0.4) > corfac ) { 
+        corfac = (corfac,0.25)*0.25; 
+    }
+    // 고왜곡형태
+    else { 
+        corfac = pow(corfac,0.33)*0.3;  
+    }
+}else { 
+    corfac = 0; 
+    coordinate[2] = 0; 
+}
+```
+
 
 
 #### 열화상 카메라 배치
@@ -169,6 +245,69 @@ mlx90640은 110*60의 화각을 가지고 있으며, 이를 두 개 이용하여
 
 <center>
 <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/cameraRange.png?raw=true" width="600">
+</center>
+
+이를 위해 일상 생활을 시뮬레이션하며 두 카메라의 위치를 선정하였다. 영유아의 경우, 기어다니는 경우와 걸어다니는 경우를 모두 고려해야 하므로,
+
+- 기어다닐 때 정면이 되는 **손등 방향**
+- 팔을 뻗을 때 정면이 되는 **팔의 축 방향**
+
+을 기준으로 세부적인 위치를 선정하였다.
+
+
+
+### 통신
+
+스마트밴드는 UDP 통신을 이용하여 주변기기와 통신한다. 스마트밴드가 주변에 위험 신호를 알리기 위해, 인터넷 통신을 시도할 필요가 있으나, 별도의 서버를 운영할 수 없기 때문에 빠른 속도로 간단하게 데이터를 전송할 수 있는 UDP 방식을 활용하였다.
+
+스마트밴드에서 위험이 감지되었을 때, 연결되어있는 공유기로 신호를 전송한 후, 공유기에서 연결된 모든 주소로 위험 신호를 전달한다. (개발 당시에 웹에 대해 처음으로 공부를 하였었고, HttpStatus 등에 무지하였기 때문에 그저 200이라고 데이터를 송출하였다.) 기본적으로 가정에 설치하는 스피커에서 신호를 받아 알림을 송출하며, 보호자의 휴대폰이 연결되어 있다면, 이를 통해서도 알림을 전송한다.
+
+UDP의 전송 신뢰도 문제를 해결하기 위해, 한 번 위험이 감지되었을 때 신호를 수백번 송출하도록 하였다.
+
+
+
+```c++
+void loop(void) {
+  switch (stat){
+    // 위험판단 실행
+    case 0:
+      readTempValues();
+      break;
+
+    // 위험 발생. 위험신호(ON), 안전신호(OFF)
+    case 1:         
+    
+      // wifi
+      String s = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n<html>\r\n"; 
+      s += (ing)? "OFF": "ON";      // vall의 값이 참이면('0'아닌 값은 모두 참) 'ON'저장, 거짓이면'OFF'저장
+      s += "</html>\n"; 
+      for (int i = 0; i < 1000; i++) { client.print(s); }
+      delay(1);
+
+      //연결 끊기
+      client.stop();                                        
+      Serial.println("disconnect");
+          
+      //재연결
+      while (!client) { client = server.available(); }      
+      while (!client.available()){ delay(1); }
+      Serial.println("new client");
+      
+      delay(1);
+      if (ing) ing = false;
+      else     ing = true ;
+
+      stat = 0;
+      break;
+  }
+}
+```
+
+
+
+MIT App Inventor를 이용해 개발한 어플의 블록모습
+<center>
+<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/appblock.png?raw=true" width="600">
 </center>
 
 
@@ -181,6 +320,8 @@ mlx90640은 110*60의 화각을 가지고 있으며, 이를 두 개 이용하여
 > 이 프로젝트가 가진 두가지 조건 (영유아가 사용, 두 개의 열화상 카메라 사용) 을 만족하면서, 사용자가 불편하지 않을 수준이 배터리타임을 만들어내야 했다.
 
 초기 버전의 코드를 적용시킨 스마트밴드의 베터리타임은 3시간이 체 되지 못했다. 
+
+
 
 
 

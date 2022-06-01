@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Life
+title: Develop
 description: >
   Develop tab
 hide_description: true
@@ -8,7 +8,7 @@ sitemap: false
 permalink: /develop/
 ---
 
-저의 소소한 일상이 담겨 있는 폴더입니다.
+개발 관련 공부한 내용들이 담겨 있는 폴더입니다.
 
 * [solving]{:.heading.flip-title} --- 다양한 문제 풀이들.
 * [studing]{:.heading.flip-title} --- 내가 공부한 것들과, 발생했던 오류핸들링에 대한 글들.
