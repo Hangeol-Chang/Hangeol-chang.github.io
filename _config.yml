@@ -49,7 +49,7 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Portfolio
-    url:               /Portfolio/
+    url:               /portfolio/
   - title:             Life
     url:               /life/
   - title:             Develop
