@@ -322,7 +322,7 @@ MIT App Inventor를 이용해 개발한 어플의 블록모습
 
 초기 버전의 코드를 적용시킨 스마트밴드의 베터리타임은 3시간이 체 되지 못했다. 두 개의 mlx90640이 2Hz로 작동하며 전력을 소비했고, 이 전력을 줄일 필요가 있었다.
 
-mlx90640은 자체적으로 0.5~64Hz의 동작 속도를 설정할 수 있으나, 우리는 더 상세하게 동작시간을 조정하기 위해
+mlx90640은 자체적으로 0.5~64Hz의 동작 속도를 설정할 수 있으나, 우리는 더 상세하게 동작시간을 조정하기 위해 아두이노의 loop함수 자체에 딜레이를 주어 
 
 <center>
 <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/battery1.png?raw=true" width="300">
