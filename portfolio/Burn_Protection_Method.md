@@ -155,13 +155,11 @@ $$
 $$
 
 
-위 식을 알고리즘에 적용하여 테스트를 진행하였고, 결과는 아래의 표와 같다.
+위 식을 알고리즘에 적용하여 테스트를 진행하였고, 결과는 아래의 표와 같이, 3m 이내의 거리에서 95%의 정확도로 열원의 접근을 감지할 수 있었다.
 
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/detectTest.png?raw=true" width="600">
 </center>
-
-3m 이내의 거리에서 95%의 정확도로 열원의 접근을 감지하였고,
 
 
 

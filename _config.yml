@@ -2,7 +2,7 @@
 # ========================================================================================
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://hangeol-chang.github.io`)
-# url:                   https://hangeol-chang.github.io
+url:                   https://hangeol-chang.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
