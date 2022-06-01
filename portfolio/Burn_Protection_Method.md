@@ -121,7 +121,21 @@ $$
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/epsilon_correction_graph.png?raw=true" width="600">
 </center>
 
-위의 그래프는,
+위의 그래프는, A에 대한 b의 수를 시각화 한 것이다. 그래프에서 검은 영역은 측정되지 않는 영역, 초록색은 정사각형으로 판단할 수 있는 영역, 빨간색은 약간의 왜곡이 있는 영역, 그 바깥은 많은 왜곡이 있는 영역으로 구분하였다. 각각의 그래프는 길험적으로 얻은 값들을 연결하여 curve fitting을 진행하여 도출하였고 식들은 아래와 같다.
+
+<br>
+$$
+비왜곡 지역 : 4* \sqrt{A} <= b < 7 * A^{\frac{13}{30}}
+$$
+<br>
+$$
+저왜곡 지역 : 7 * A^{\frac{13}{30}} <= b < 10 * A^{\frac{2}{5}}
+$$
+<br>
+$$
+고왜곡 지역 : 10 * A^{\frac{2}{5}} <= b
+$$
+
 
 
 
