@@ -322,26 +322,16 @@ MIT App Inventor를 이용해 개발한 어플의 블록모습
 
 초기 버전의 코드를 적용시킨 스마트밴드의 베터리타임은 3시간이 체 되지 못했다. 두 개의 mlx90640이 2Hz로 작동하며 전력을 소비했고, 이 전력을 줄일 필요가 있었다.
 
-mlx90640은 자체적으로 0.5~64Hz의 동작 속도를 설정할 수 있으나, 우리는 더 상세하게 동작시간을 조정하기 위해 아두이노의 loop함수 자체에 딜레이를 주어 
+mlx90640은 자체적으로 0.5~64Hz의 동작 속도를 설정할 수 있으나, 우리는 더 상세하게 동작시간을 조정하기 위해 아두이노의 loop함수 자체에 딜레이를 주어 동작하도록 하였다.
+
+
 
 <center>
 <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/battery1.png?raw=true" width="300">
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/battery2.png?raw=true" width="300">
 </center>
 
-
-
-### 기구부 설계
-
-#### 재료 선정
-
-영유아가 착용하고 활동하는 데에 지장을 주지 않아야 하므로, 가볍고 작게 제작하며, 
-
-
-
-#### 하네스 와이어링
-
-
+열원이 감지되지 않은 **열원 감지 대기 상태**에서는 3초에 한번씩 탐색을 진행하고, 카메라의 한 부분에서라도 열원이 감지되기 시작하면, **경계 상태**가 되어 1초에 한 번씩 탐색을 진행하고, 열원이 계속해서 감지되면 빠르게 5Hz의 탐색속도까지 속도를 높인다. 이후에 열원이 카메라에서 감지되지 않게 되면, 서서히 탐색 시간을 높여서 열원 감지 대기 상태로 복귀한다.
 
 
 
