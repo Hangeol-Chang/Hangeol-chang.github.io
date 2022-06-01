@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Life
+title: Learning
 description: >
-  Life tab
+  learning tab
 hide_description: true
 sitemap: false
 permalink: /learning/

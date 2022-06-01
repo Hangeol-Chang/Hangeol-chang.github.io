@@ -35,9 +35,6 @@ permalink: /portfolio/
 - MIT APP Inventor
 - 3D 프린트
 
-일부 모델링 기술들은 본인의 분야가 아니었기 때문에 일부 생략합니다.
-{:.note}
-
 
 
 ### 기술 개요
@@ -46,8 +43,8 @@ permalink: /portfolio/
 <img src="../assets/img/portfolio/Burn_Protection_Method/cameraRange.png" width="600">
 </center>
 
-- 두 개의 mlx90640을 이용하여 영유아의 전방 범위에서의 열원 접근을 판단하고, 열원의 접근을 판단하여 다양한 방식으로 경고를 발생.
-- mlx90640의 화각은 110*60도로, 2개를 이용하여 사용자의 전 범위에 대한 열화상을 분석하기에는 무리가 있다. 하지만 카메라의 수를 늘리면 배터리타임에 큰 지장이 생기기에, 두 대의 mlx90640을 이용하여 사용자가 움직이는 범위를 최대한 감지할 수 있는 배치를 선정.
+- 두 개의 mlx90640을 이용하여 영유아의 전방 범위에서의 열원 접근을 판단하고, 열원의 접근을 판단하여 다양한 방식으로 경고를 발생한다.
+- mlx90640의 화각은 110*60도로, 2개를 이용하여 사용자의 전 범위에 대한 열화상을 분석하기에는 무리가 있다. 하지만 카메라의 수를 늘리면 배터리타임에 큰 지장이 생기기에, 두 대의 mlx90640을 이용하여 사용자가 움직이는 범위를 최대한 감지할 수 있는 배치를 선정하였다.
 
 <br>
 
@@ -56,7 +53,7 @@ permalink: /portfolio/
 <img src="../assets/img/portfolio/Burn_Protection_Method/swing.png" width="200">
 </center>
 
-- 열원의 접근을 판단하는 방법에 있어서, 사용자가 열원을 그저 지나가는 상황과, 열원에 접근하는 상황을 구분하는 알고리즘을 작성.
+- 열원의 접근을 판단하는 방법에 있어서, 사용자가 열원을 그저 지나가는 상황과, 열원에 접근하는 상황을 구분하는 알고리즘을 제작하여 사용하였다.
 
 <br>
 
@@ -64,7 +61,7 @@ permalink: /portfolio/
     <img src="../assets/img/portfolio/Burn_Protection_Method/distort.png" width="600">
 </center>
 
-- 물체의 형상에 따라 물체가 접근할 때 변수의 변화 양상이 달라지며, 이를 구분할 수 있도록 물체의 형상에 따른 보정 알고리즘을 제작.
+- 물체의 형상에 따라 물체가 접근할 때 변수의 변화 양상이 달라지며, 이를 구분할 수 있도록 물체의 형상에 따른 왜곡을 보정하는 알고리즘을 제작하였다.
 
 <br>
 
@@ -74,7 +71,7 @@ permalink: /portfolio/
 
 
 
-- 배터리 최적화를 위해, 열원이 감지되지 않을 때는 4초당 한 번씩 샘플링을 진행하며, 열원이 감지되었을 때 급격하게 샘플링 타임을 감소시켜, 0.2초에 한 번씩 샘플링을 진행.
+- 배터리 최적화를 위해, 열원이 감지되지 않을 때는 4초당 한 번씩 샘플링을 진행하며, 열원이 감지되었을 때 급격하게 샘플링 타임을 감소시켜, 0.2초에 한 번씩 샘플링을 진행한다.
 
 
 
@@ -100,6 +97,8 @@ permalink: /portfolio/
 이 프로젝트는, 1993년도 게임 Hexxagon을 모바일로 이식하는 것을 목표로 시작한 개인프로젝트로,<br>
 개발 당시에도 동일한 게임이 모바일에 존재하였으나, 애니메이션의 부재, 디자인, 3인 모드의 부재 등의 아쉬움을 채우기 위해 개발하게 되었습니다.
 
+현재는 구글플레이스토어에서 다운로드는 불가능하며, 깃허브 페이지에서 릴리즈된 베타버전을 다운받아 플레이해볼 수 있습니다.
+
 
 
 ### 사용된 기술
@@ -109,7 +108,29 @@ permalink: /portfolio/
 
 
 
+### 게임 소개
+
+ 이 게임은 땅따먹기 형태의 보드게임이다.
+
+육각형 형태의 타일이 벌집으로 늘어선 판에서 게임이 진행되며, 자신의 말을 늘리고 상대의 말을 먹어가며 자신의 땅을 넓혀가는 것이 목표인 게임이다.
+
+아래는 게임 진행의 간단한 overview이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/test3.gif?raw=true" width="400">
+</center>
+
 ### 기술 개요
+
+- 유니티엔진을 이용하여 플레이 가능한 보드게임을 제작.
+
+- 벌집 모양의 맵을 구현하고, 다양한 맵 형태를 만들기 위해 일부를 타일을 제거하여야 한다.
+  이를 위해서 기초가 되는 많은 양의 타일을 미리 깔아두고, 맵 번호를 입력받아 필요 없는 타일을 지우도록 하였다.
+- 
+
+AI를 만들기 위해
+
+
 
 
 
@@ -118,7 +139,12 @@ permalink: /portfolio/
 
 #### 자세히 보기
 
+* [detail_Hexxagon]{:.heading.flip-title} --- 자세히 보기
+* [Github_Hexxagon]{:.heading.flip-title} --- 프로젝트 깃허브
+  {:.related-posts.faded}
 
+[detail_Hexxagon]: Hexxagon.md
+[Github_Hexxagon]: https://github.com/Hangeol-Chang/Burn_preventation_solution
 
 <br>
 
@@ -143,6 +169,10 @@ permalink: /portfolio/
 
 
 ### 기술 개요
+
+
+
+몬스터가 발판에서 떨어지지 않는 것.
 
 
 
