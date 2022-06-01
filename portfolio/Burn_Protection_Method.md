@@ -137,6 +137,32 @@ $$
 $$
 
 
+각각의 범위에 대해, 아래와 같이 보정계수 c를 도출한다.
+
+<br>
+$$
+저왜곡 보정계수 : c = 0.25 * (\frac{b}{A})^{0.25}
+$$
+<br>
+$$
+고왜곡 보정계수 : c = 0.3 * (\frac{b}{A})^{0.33}
+$$
+구해진 보정계수를 이용하여, epsilon 도출식을 아래와 같이 수정하였다.
+
+<br>
+$$
+\epsilon = \frac{b의 A로 변화량(접근경향성)}{A의 b로 변화량(후퇴경향성) * (1+c) + 1}
+$$
+
+
+위 식을 알고리즘에 적용하여 테스트를 진행하였고, 결과는 아래의 표와 같다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Burn_Protection_Method/detectTest.png?raw=true" width="600">
+</center>
+
+3m 이내의 거리에서 95%의 정확도로 열원의 접근을 감지하였고,
+
 
 
 #### 열화상 카메라 배치
