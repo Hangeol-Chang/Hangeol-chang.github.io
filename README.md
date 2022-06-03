@@ -84,6 +84,14 @@ hide_last_modified: true
 
 
 
+이미지
+
+<center>
+<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/경로/제목.png?raw=true" width="300">
+</center>
+
+
+
 #### 글에 쓰는 양식들
 
 ```markdown
