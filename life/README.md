@@ -15,4 +15,4 @@ permalink: /life/
 {:.related-posts.faded}
 
 [it]: it/
-[life]: daily/
+[daily]: daily/
