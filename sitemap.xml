@@ -1,6 +1,14 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<script id="youtube-hd-fjdmkanbdloodhegphphhklnjfngoffa">var ythdlog = () => {};;var ythderror = () => {};</script>
+<url>
+    <loc>https://hangeol-chang.github.io/develop/solving/2022-06-05-BJ1806/</loc>
+</url>
+</urlset>
+
+<!--
+---
+---
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
@@ -18,3 +26,5 @@
     {% endif %}
     {% endfor %}
 </urlset>
+
+-->
