@@ -1,7 +1,20 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<script id="youtube-hd-fjdmkanbdloodhegphphhklnjfngoffa">var ythdlog = () => {};;var ythderror = () => {};</script>
-<url>
-    <loc>https://hangeol-chang.github.io/develop/solving/2022-06-05-BJ1806/</loc>
-</url>
+    {% for post in site.posts %}
+    <url>
+        <loc>{{ site.url | append: site.baseurl | append: post.url }}</loc>
+    </url>
+    {% endfor %}
+
+    {% for page in site.pages %}
+    {% if page.layout != nil %}
+    {% if page.layout != 'feed' %}
+    <url>
+        <loc>{{ site.url | append: site.baseurl | append: page.url | remove: "index.html" }}</loc>
+    </url>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
 </urlset>
