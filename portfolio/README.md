@@ -149,6 +149,12 @@ permalink: /portfolio/
 
 
 
+#### 필요 에셋
+
+- 게임에 필요한 효과음은 저작권 무료 음악 배포 사이트를 이용하였다.
+
+
+
 ---
 
 
@@ -159,7 +165,7 @@ permalink: /portfolio/
   {:.related-posts.faded}
 
 [detail_Hexxagon]: Hexxagon.md
-[Github_Hexxagon]: https://github.com/Hangeol-Chang/Hexxago
+[Github_Hexxagon]: https://github.com/Hangeol-Chang/Hexxagon
 
 <br>
 
@@ -179,21 +185,33 @@ permalink: /portfolio/
 
 - Unity
 - C#
-- MVC 패턴
+- 오브젝트 풀링
 
 
 
 ### 기술 개요
 
-#### 플레이어의 이동
+#### 플레이어 물리.
 
-- 
+- 플레이어는 기본적으로 collider를 가지고 있는 강체이다. 유니티에서 강체는 Addforce와 translate 두 가지 방법으로 움직일 수 있다. 이 프로젝트는 메이플스토리와 동일한 조작감을 구현하는 것을 목표로 하였다. 점프, 더블점프 등의 다양한 상황에서, 관성 등의 물리가 적용되어야 하기 때문에, Addforce를 이용하여 구현하였다.<br>이 밖에, 중력 등에 필요한 상수값은 실제 게임과 비교해가며 실험적으로 산출하였다.
 
-
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/doublejump.gif?raw=true" width="500">
+</center>
 
 #### 플레이어 스킬
 
-- 
+- 플레이어의 스킬에는, 외부 메모리 단편화를 방지하기 위해 오브젝트 풀링이 사용되었다. 이는 여러 번 생성과 소멸을 반복하는 모든 오브젝트에 적용되었으며, 주로 스킬이펙트가 이에 해당된다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/particle.gif?raw=true" width="500">
+</center>
+
+- 위의 사진을 보면, 나비와 화살이 날라가는 것을 볼 수 있다.
+
+[오브젝트 풀링 관련 사진]
+
+
 
 
 
@@ -205,9 +223,22 @@ permalink: /portfolio/
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/moster.gif?raw=true" width="500">
 </center>
 
+#### 데미지 표현
 
 
-몬스터가 발판에서 떨어지지 않는 것.
+
+
+
+#### 필요 에셋
+
+- 구현에 사용된 그림들 중, 캐릭터, 맵, 몬스터 등은 은 실제 메이플스토리의 클라이언트를 추출하여 사용하였다.
+
+- 이 밖에 필요한 스킬, 피격이펙트 등은 직접 그려서 사용하였다.
+
+  <center>
+      <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rapidfireeff1.gif?raw=true" width="300">
+          <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rapidfireeff2.gif?raw=true" width="300">
+  </center>
 
 
 
