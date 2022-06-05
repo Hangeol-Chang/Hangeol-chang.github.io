@@ -123,19 +123,29 @@ permalink: /portfolio/
 ### 기술 개요
 
 - 유니티엔진을 이용하여 플레이 가능한 보드게임을 제작.
+
 - 벌집 모양의 맵을 구현하고, 다양한 맵 형태를 만들기 위해 일부를 타일을 제거하여야 한다.
   이를 위해서 기초가 되는 많은 양의 타일을 미리 깔아두고, 맵 번호를 입력받아 필요 없는 타일을 지우도록 하였다. 이 방법을 사용해서 얻은 장점과 단점이 각각 존재한다.
+  
   - 장점 : 간단하게 숫자를 입력하는 것으로 새로운 맵을 추가할 수 있다.
   - 단점 : 미리 정해놓은 사이즈로 맵의 최대 크기가 제한된다. 이를 수정하기 위해선, 모든 맵의 정보를 수정해야 한다.
-- 혼자서 게임을 즐기게 하기 위해, AI를 제작하여 적용하였다. 이 AI는 5개의 변수를 활용하여 본인의 행동 패턴을 결정합니다. 자신과 상대방의 말 배치에 따라 각각의 변수에 값을 할당하고, 이에 가중치를 주어 본인이 할 수 있는 행동 중 가장 높은 점수를 가지는 행동을 취합니다.
-- AI가 사용하는 **가중치**를 조절하여, AI의 난이도를 쉽게 조절할 수 있습니다.
-  단순히 잘 하게 가중치를 조절하는 것을 넘어서서, 가중치를 반대로 설정함으로써 상대방의 예측을 피해가고, 공략을 난해하게 하는 것도 가능합니다.
-  [AI 난이도 관련 사진 첨부]
-- 파티클 시스템을 이용하여 밋밋한 배경을 꾸몄습니다.
+  
+  <center>
+      <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/mapmaking.gif?raw=true" width="400">
+  </center>
 
-AI를 만들기 위해
+- 혼자서 게임을 즐기게 하기 위해, AI를 제작하여 적용하였다. 이 AI는 5개의 변수를 활용하여 본인의 행동 패턴을 결정합니다. 자신과 상대방의 말 배치에 따라 각각의 변수에 값을 할당하고, 이에 가중치를 주어 본인이 할 수 있는 행동 중 가장 높은 점수를 가지는 행동을 취한다.
 
+  - 밑의 사진에서, ai가 파란색 말을 움직인다.
 
+  <center>
+      <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aitest.gif?raw=true" width="400">
+  </center>
+
+- AI가 사용하는 **가중치**를 조절하여, AI의 난이도를 쉽게 조절할 수 있다.
+  단순히 잘 하게 가중치를 조절하는 것을 넘어서서, 가중치를 반대로 설정함으로써 상대방의 예측을 피해가고, 공략을 난해하게 하는 것도 가능하다.
+
+- 파티클 시스템을 이용하여 밋밋한 배경을 꾸몄다.
 
 
 
@@ -149,7 +159,7 @@ AI를 만들기 위해
   {:.related-posts.faded}
 
 [detail_Hexxagon]: Hexxagon.md
-[Github_Hexxagon]: https://github.com/Hangeol-Chang/Burn_preventation_solution
+[Github_Hexxagon]: https://github.com/Hangeol-Chang/Hexxago
 
 <br>
 
@@ -175,6 +185,26 @@ AI를 만들기 위해
 
 ### 기술 개요
 
+#### 플레이어의 이동
+
+- 
+
+
+
+#### 플레이어 스킬
+
+- 
+
+
+
+#### 몬스터
+
+- 공중에 있는 발판에서 몬스터가 떨어지지 않도록 하여야 했다. 이를 위해 몬스터에 작은 원형 트리거를 추가하여서, 몬스터가 발판과 닿고있는지 여부를 판단하고, 발판을 벗어나면 방향을 바꾸도록 하였다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/moster.gif?raw=true" width="500">
+</center>
+
 
 
 몬스터가 발판에서 떨어지지 않는 것.
@@ -186,7 +216,14 @@ AI를 만들기 위해
 
 #### 자세히 보기
 
+* [detail_Lucid]{:.heading.flip-title} --- 자세히 보기
+* [Github_Lucid]{:.heading.flip-title} --- 프로젝트 깃허브
+  {:.related-posts.faded}
 
+[detail_Lucid]: Lucid.md
+[Github_Lucid]: https://github.com/Hangeol-Chang/Lucid
+
+<br>
 
 
 
