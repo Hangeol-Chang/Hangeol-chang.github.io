@@ -186,6 +186,7 @@ permalink: /portfolio/
 - Unity
 - C#
 - 오브젝트 풀링
+- TextMeshPro
 
 
 
@@ -225,7 +226,8 @@ permalink: /portfolio/
 
 #### 데미지 표현
 
-
+- 이 게임의 데미지 표시는 TextMeshPro를 이용하였다.
+- 실제 메이플스토리와 유사한 경험을 제공하기 위해서
 
 
 
