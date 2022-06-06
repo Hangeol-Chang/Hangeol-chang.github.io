@@ -4,7 +4,6 @@ title: Portfolio
 description: >
   this is portfolio, i have no idea why this isn`t on the page
 hide_description: true
-sitemap: false
 permalink: /portfolio/
 ---
 

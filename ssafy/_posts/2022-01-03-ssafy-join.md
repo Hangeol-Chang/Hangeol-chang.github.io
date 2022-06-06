@@ -2,7 +2,6 @@
 layout: post
 title: 비전공자 싸피7기 합격수기
 date: 2022-01-03 00:00:00
-sitemap: false
 hide_last_modified: true
 ---
 

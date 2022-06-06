@@ -3,8 +3,6 @@ layout: page
 title: Burn Protection Method
 description: >
   detail description about Burn Protection Method
-hide_description: true
-sitemap: false
 ---
 
 

@@ -4,7 +4,6 @@ title: Life
 description: >
   Life tab
 hide_description: true
-sitemap: false
 permalink: /life/
 ---
 

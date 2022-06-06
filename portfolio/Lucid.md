@@ -3,8 +3,6 @@ layout: page
 title: Lucid
 description: >
   detail description about Lucid Project
-hide_description: true
-sitemap: false
 ---
 
 

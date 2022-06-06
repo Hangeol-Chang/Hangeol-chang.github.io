@@ -3,8 +3,6 @@ layout: page
 title: Hexxagon
 description: >
   detail description about Hexxagon Project
-hide_description: true
-sitemap: false
 ---
 
 

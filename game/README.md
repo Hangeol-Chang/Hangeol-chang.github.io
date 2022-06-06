@@ -2,9 +2,7 @@
 layout: page
 title: GAME
 description: >
-  Life tab
-hide_description: true
-sitemap: false
+  Game tab
 permalink: /game/
 ---
 

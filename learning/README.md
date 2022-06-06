@@ -3,8 +3,6 @@ layout: page
 title: Learning
 description: >
   learning tab
-hide_description: true
-sitemap: false
 permalink: /learning/
 ---
 
