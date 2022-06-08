@@ -13,7 +13,6 @@ permalink: /portfolio/
 링크를 클릭할 시 프로젝트의 세부사항으로 연결되며, 프로젝트 진행 과정 및 세부 기술들을 확인하실 수 있습니다.
 {:.note}
 
-0. replaced with contents table
 {:toc}
 
 # #1 Burn Protection Method
