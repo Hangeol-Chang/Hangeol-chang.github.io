@@ -10,7 +10,7 @@ description: >
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-# About
+## About
 
 이 페이지는 **'사이버-물리 시스템을 이용한 영유아의 화상방지 알고리즘 및 스마트밴드'** 연구에 대해 논문에 등재된 연구 결과 및 작동 방식과, 논문에 등재되지 않은 연구 개발 과정에 대한 세부적인 사항을 포함하고 있습니다.
 
@@ -22,7 +22,7 @@ description: >
 
 
 
-# Abstract
+## Abstract
 
 이 연구는 일상생활에서 **영유아의 화상을 방지하기 위한 새로운 알고리즘**을 제안한다. 
 

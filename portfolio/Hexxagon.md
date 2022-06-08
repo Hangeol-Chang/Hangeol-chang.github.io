@@ -10,11 +10,15 @@ description: >
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-# About
+## About
 
-이 페이지는 개인프로젝트로 진행하였던 게임 제작 프로젝트 **Hexxagon**에 대해 소개하고 있습니다. 게임 진행을 위한 로직들에 대한 설명과, 이를 구현 과정에서 발생하였던 중요 이슈 및 기타 사항들을 포함하고 있습니다.
+이 페이지는 개인프로젝트로 진행하였던 게임 제작 프로젝트 **Hexxagon**에 대해 소개하고 있습니다. 게임 진행을 위한 로직들에 대한 설명과, 이를 구현하는 과정에서 발생하였던 중요 이슈 및 기타 사항들을 포함하고 있습니다.
 
 
+
+[ develop_youtube ]{:.heading.flip-title} -- 개발과정 유튜브 링크
+
+[develop_youtube ]: https://www.youtube.com/watch?v=jfQ35B7fGc0&list=PLghOZn1LvD2No6V2XVAvCAHQgyeea9G43
 
 ## Abstract
 
@@ -339,6 +343,16 @@ public void aiset(int i)
 ```
 
 
+
+## Assets
+
+게임 개발에 필요한 그림 에셋은 전부 직접 그려서 사용하였다. 아래 그림은 각 플레이어 말들의 등장 모션을 프레임 단위로 분리하여 나타낸 것이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/PlayerMotion.png?raw=true" width="500">
+</center>
+
+에셋 제작을 위해 
 
 ## 한계
 
