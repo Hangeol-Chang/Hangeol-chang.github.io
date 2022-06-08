@@ -20,6 +20,8 @@ description: >
 
 Hexxagon은 1993년 개발된 보드게임으로, 크게 유명한 게임은 아니지만, 현재까지 형태를 유지해 오고 있다. 실제로 [Online game link](https://hexxagon.com/)에 접속하여 게임을 플레이해볼 수 있고, 모바일로도 여러 종류의 어플이 존재한다. 아래 사진은 위 링크에서 볼 수 있는 게임 진행 예시이다.
 
+
+
 [게임 진행 gif 따서 넣을 것.]
 
 
@@ -49,7 +51,15 @@ Hexxagon은 1993년 개발된 보드게임으로, 크게 유명한 게임은 아
 
 ### 맵 제작
 
-벌집 모양의
+정육각형 모양의 타일이 
+
+[다양한 종류의 맵  사진들]
+
+[맵 구상 사진들(pdf 그거)]
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/mapmaking.gif?raw=true" width="400">
+</center>
 
 
 
