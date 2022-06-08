@@ -27,19 +27,67 @@ hide_last_modified: true
 
 ### 원인
 
-이 에러가 뜨는 이유는 단순하였다
+이 에러가 뜨는 이유는 단순하였다. 구글에서 제공하는 sitemap 형식을 제대로 따르지 않았기 때문이다. 이 떄문에 구글이 sitemap을 제대로 읽어가지 못 한 것이다.
+
+아마 다들 sitemap을 만들 때 구글링해보고 블로그에 뜨는 글을 긁어올 텐데, 아마 이게 구글에서 지원하는 형식이 아닌 것 같다.
 
 
 
-나는 다음과 같은 에러를 계속 보았다.
+### 해결
+
+구글이 지정한 사이트맵 형식 중 하나를 사용해야 한다. xml 형태의 sitemap의 경우, 아래의 양식을 맞춰야 한다.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://www.example.com/foo.html</loc>
+    <lastmod>2018-06-04</lastmod>
+  </url>
+</urlset>
+```
+
+자세한 내용은 아래 공식 문서에서 확인할 수 있다.
+
+[구글 서치 콘솔 사이트맵 제출 공식 문서](https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap?visit_id=1654692538575-6805840311325162354&rd=1)
+
+
+
+## 2
+
+### 에러
+
+이후에 나는 다음과 같은 에러를 계속 보았다.
 
 > 사이트맵을 읽을 수 있지만 오류가 있습니다. 
 > 유효한 URL이 아닙니다. 수정한 후 다시 제출하십시오.
 
 
 
+### 원인
 
+사이트맵에 있는 url이 유효하지 않거나, 읽을 수 없는 문자가 포함되어 있는 경우 이 에러가 표시된다.
+
+읽을 수 없는 문자의 대표적인 예는 **&**이다. 왜 읽을 수 없는지 아마 html에서 <, >, & 등의 특수문자를 다르게 해석하는 것과 관련이 있지 않을까 싶다.
+
+
+
+### 해결
+
+이런 허용하지 않는 문자를 입력하고 싶으면 변환을 해서 사용해야 한다. &의 경우 &#38로 쓰면 된다. 다양한 특수문자에 대해서는 아래 페이지를 참조하면 좋다.
+
+[html 특수문자 리스트](http://kor.pe.kr/util/4/charmap2.htm)
+
+
+
+## 3
+
+그냥 추가 사항인데, 구글 서치 콘솔은 내가 사이트맵을 제출한다고 해서 바로 이 사이트맵을 읽고 적용해주지 않는다. 따라서, 사이트맵을 바꿔서 제출했는데 오류가 해결이 안된다고 해서, 제출한 사이트맵이 이상하다고 단정지을 수 없다.
+
+이를 확인하기 위해서는 사이트맵을 마지막으로 읽은 날짜를 봐야 한다. 자세한 시간은 나오지 않고 날짜만 나오는 것이 단점이긴 하지만, 이 날짜가 사이트맵을 제출한 날짜보다 이후인지를 확인해 보자. 7일에 사이트맵을 제출했는데 4일에 마지막으로 사이트맵을 읽었다면, 아직 내가 마지막으로 제출한 사이트맵이 처리되지 않은 것이다.
+
+이는 얌전히 기다려보는 수밖에 없다. 안된다고 머리 아프지 말고, 인내심을 가지고 구글이 빨리 내 사이트맵을 읽기를 기도하자.
 
 <center>
-<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/develop/studing/sitemap.png?raw=true" width="300">
+<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/develop/studing/sitemap.png?raw=true" width="700">
 </center>
