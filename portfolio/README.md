@@ -13,8 +13,9 @@ permalink: /portfolio/
 링크를 클릭할 시 프로젝트의 세부사항으로 연결되며, 프로젝트 진행 과정 및 세부 기술들을 확인하실 수 있습니다.
 {:.note}
 
-0. 목차
 
+
+0. 목차
 {:toc}
 
 # #1 Burn Protection Method
@@ -77,7 +78,7 @@ permalink: /portfolio/
 
 ---
 
-#### 자세히 보기
+### 자세히 보기
 
 * [detail_Burn_Protection_Method]{:.heading.flip-title} --- 자세히 보기
 * [Github_Burn_Protection_Method]{:.heading.flip-title} --- 프로젝트 깃허브
@@ -119,8 +120,9 @@ permalink: /portfolio/
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/test3.gif?raw=true" width="400">
 </center>
-
 ### 기술 개요
+
+#### 맵 제작
 
 - 유니티엔진을 이용하여 플레이 가능한 보드게임을 제작.
 
@@ -133,6 +135,8 @@ permalink: /portfolio/
   <center>
       <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/mapmaking.gif?raw=true" width="400">
   </center>
+
+#### AI 제작
 
 - 혼자서 게임을 즐기게 하기 위해, AI를 제작하여 적용하였다. 이 AI는 5개의 변수를 활용하여 본인의 행동 패턴을 결정합니다. 자신과 상대방의 말 배치에 따라 각각의 변수에 값을 할당하고, 이에 가중치를 주어 본인이 할 수 있는 행동 중 가장 높은 점수를 가지는 행동을 취한다.
 
@@ -158,7 +162,7 @@ permalink: /portfolio/
 ---
 
 
-#### 자세히 보기
+### 자세히 보기
 
 * [detail_Hexxagon]{:.heading.flip-title} --- 자세히 보기
 * [Github_Hexxagon]{:.heading.flip-title} --- 프로젝트 깃허브
@@ -192,7 +196,7 @@ permalink: /portfolio/
 
 ### 기술 개요
 
-#### 플레이어 물리.
+#### 플레이어 물리
 
 - 플레이어는 기본적으로 collider를 가지고 있는 강체이다. 유니티에서 강체는 Addforce와 translate 두 가지 방법으로 움직일 수 있다. 이 프로젝트는 메이플스토리와 동일한 조작감을 구현하는 것을 목표로 하였다. 점프, 더블점프 등의 다양한 상황에서, 관성 등의 물리가 적용되어야 하기 때문에, Addforce를 이용하여 구현하였다.<br>이 밖에, 중력 등에 필요한 상수값은 실제 게임과 비교해가며 실험적으로 산출하였다.
 
@@ -247,7 +251,7 @@ permalink: /portfolio/
 ---
 
 
-#### 자세히 보기
+### 자세히 보기
 
 * [detail_Lucid]{:.heading.flip-title} --- 자세히 보기
 * [Github_Lucid]{:.heading.flip-title} --- 프로젝트 깃허브

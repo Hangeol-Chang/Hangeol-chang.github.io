@@ -16,9 +16,10 @@ description: >
 
 
 
-- [ develop_youtube ]{:.heading.flip-title} -- 개발과정 유튜브 링크
+* [develop_youtube]{:.heading.flip-title} --- 개발과정 유튜브 링크
+  {:.related-posts.faded}
 
-[develop_youtube ]: https://www.youtube.com/watch?v=jfQ35B7fGc0&list=PLghOZn1LvD2No6V2XVAvCAHQgyeea9G43
+[develop_youtube]: https://www.youtube.com/watch?v=jfQ35B7fGc0&list=PLghOZn1LvD2No6V2XVAvCAHQgyeea9G43
 
 ## Abstract
 
@@ -75,7 +76,7 @@ Hexxagon은 1993년 개발된 보드게임으로, 크게 유명한 게임은 아
 육각형 형태의 타일이 지그재그로 배치되어 있기 때문에, 1차원 2차원 배열에 상관 없이 1번 문제를 해결하는 것은 난해하였다. 2번 문제를 고려할 때, 맵의 타일을 지우는 것에 있어 1차원 배열을 이용하는 것이 간단할 것이라고 생각했다. 
 
 2차원 배열을 이용하면 맵 정보를 전달할 때 2차원 배열의 리스트인 3차원 배열을 전달해야 하지만, 1차원 배열일 경우 단순 숫자의 리스트인 1차원 배열을 전달하여 해결할 수 있기 때문이다.
-{:.note}{:.faded}
+{:.note}
 
 따라서 1차원 배열로 맵 정보를 구성하였다.
 
@@ -175,7 +176,7 @@ public void map(int i)
 
 
 아래 사진은 실제 맵이 만들어지는 과정으로, 게임상에서는 눈으로 구분할 수 없을 정도로 빠른 속도로 진행되나, 이해를 돕기 위해 딜레이를 주어 촬영하였다. <br>맵이 만들어지는 과정을 보면, 0번부터 80번까지의 81개의 타일이 순서대로 만들어진 후 필요 없는 타일이 삭제되고, 플레이어의 말이 배치되는 것을 볼 수 있다.
-{:.note}{:.faded}
+{:.note}
 
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/mapmaking.gif?raw=true" width="400">
@@ -255,7 +256,7 @@ public void map(int i)
 ### AI
 
 솔로 플레이를 위해 AI의 구현은 굉장히 중요한 과제이면서 동시에 어려운 과제였다. AI 구현은 게임을 설계했을 때 부터 시작했으며, 몇 주의 설계를 거쳐 간신히 원하는 형태로 구현할 수 있었다.
-{:.note}{:.faded}
+{:.note}
 
 
 
@@ -287,9 +288,7 @@ AI는 기본적으로 본인이 할 수 있는 모든 경우의 수를 계산한
 
 
 
-##### 3. 내가 타일을 복사해 움직였을 때의 점수
-
-##### 4. 내가 타일을 이동해 움직였을 때의 점수
+##### 3, 4. 내가 타일을 복사해 움직였을 때와 이동해 움직였을 때의 점수
 
 3번은 단순히 내가 타일을 복사하였을 때 얻을 점수, 3번은 타일을 이동하였을 때 얻을 점수이다. 4번의 경우 주로 0보다 작거나 같은 값으로 주어지며, 3 - 4 의 값이 클수록, ai가 소극적인 움직임을 보인다.
 
@@ -346,7 +345,8 @@ public void aiset(int i)
 
 ## Assets
 
-게임 개발에 필요한 그림 에셋은 전부 직접 그려서 사용하였다. 아래 그림은 각 플레이어 말들의 등장 모션을 프레임 단위로 분리하여 나타낸 것이다.
+게임 개발에 필요한 그림 에셋은 전부 직접 그려서 사용하였다.<br>
+아래 그림은 각 플레이어 말들의 등장 모션을 프레임 단위로 분리하여 나타낸 것이다.
 
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/PlayerMotion.png?raw=true" width="500">

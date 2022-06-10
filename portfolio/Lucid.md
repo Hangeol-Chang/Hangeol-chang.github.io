@@ -16,9 +16,10 @@ description: >
 
 
 
-[ develop_youtube ]{:.heading.flip-title} -- 개발과정 유튜브 링크
+* [develop_youtube]{:.heading.flip-title} --- 개발과정 유튜브 링크
+  {:.related-posts.faded}
 
-[develop_youtube ]: https://www.youtube.com/watch?v=1ewPsJVkCc4&amp;list=PLghOZn1LvD2NCw7RdcUJKq5gSYtNWu4vo
+[develop_youtube]: https://www.youtube.com/watch?v=1ewPsJVkCc4&amp;list=PLghOZn1LvD2NCw7RdcUJKq5gSYtNWu4vo
 
 
 
@@ -35,6 +36,30 @@ description: >
 ### 플레이어 이동
 
 기본적으로 플레이어는 좌우 이동, 점프, 이단 점프, 하단 점프, 밧줄 오르내리기가 가능하다.
+
+
+
+#### 점프, 이단 점프
+
+플레이어의 점프와 이단 점프는 canjump, candoublejump라는 boolean 형태의 변수로 관리된다. 땅에 닿아 있을 때 canjump가 true형태로 존재하며, 점프 키를 눌렀을 때 false로 변환한다. 동시에 candoublejump를 활성화하고, 점프 키를 눌렀을 때 doublejump 함수를 호출한다.
+
+```c#
+if (Input.GetKeyDown(KeyCode.LeftAlt))
+{
+    if (canjump == true) jump();
+    else if (candoublejump == true) doublejump();
+}
+```
+
+
+
+#### 밧줄 이동
+
+플레이어가 밧줄을 탈 때, 전용 애니메이션을 호출하며, 밧줄을 타고 상하로 이동이 가능하여야 한다. 이를 위하여 우선 맵의 
+
+
+
+#### 하단점프, 플랫폼 간 이동
 
 
 
