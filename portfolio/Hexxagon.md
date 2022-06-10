@@ -25,9 +25,9 @@ description: >
 
 Hexxagon은 1993년 개발된 보드게임으로, 크게 유명한 게임은 아니지만, 현재까지 형태를 유지해 오고 있다. 실제로 [Online game link](https://hexxagon.com/)에 접속하여 게임을 플레이해볼 수 있고, 모바일로도 여러 종류의 어플이 존재한다. 아래 사진은 위 링크에서 볼 수 있는 게임 진행 예시이다.
 
-
-
-[게임 진행 gif 따서 넣을 것.]
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/overview.gif?raw=true" width="600">
+</center>
 
 간략하게 게임 진행을 설명하면 다음과 같다.
 
@@ -212,11 +212,10 @@ public void map(int i)
 
 위처럼 주변 타일 정보를 가져오면, 예외처리를 해줘야 하는 부분이 발생합니다. 아래 사진처럼, 18번 타일을 눌렀을 때, 멀리 있는 17번 타일에 파란 가이드가 활성화되게 되는 것이다. 이는 게임판 상에서는 서로 멀리 떨어져있기 때문에 활성화되지 않아야 하지만, 1차원 배열로 타일을 나열했기에 발생한 문제이다. 
 
-[영상 제작했던 기록에 남아있음. 자막 안보이게 수정할 것]
-
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/movestrange.png?raw=true" width="500">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/spaceerror.gif?raw=true" width="500">
 </center>
+
 
 
 이를 해결하기 위하여 타일 사이의 거리를 활용하였다. 단순하게 현재 클릭한 타일과 일정 거리 이상이 되면 가이드를 활성화하지 않도록 처리하였다.
@@ -300,13 +299,23 @@ AI는 기본적으로 본인이 할 수 있는 모든 경우의 수를 계산한
 
 
 
+아래 영상은 적절한 수준의 ai와 대결 시연을 진행한 영상이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/maintest.gif?raw=true" width="500">
+</center>
+
+
+
 #### 난이도 조절
 
 AI가 각 상황에 부여하는 가중치를 변경함으로써 AI의 난이도를 설정할 수 있다.  아래 사진은, 동일한 상황에 대해 AI의 다른 반응을 테스트한 것으로, 가중치에 따라 AI의 행동양상이 크게 달라짐을 볼 수 있다.
 
-[난이도를 다르게 하고, 같은 상황에 대해 사진 찍어보기]
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aidif1.gif?raw=true" width="500">
+	<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aidif2.gif?raw=true" width="500">
 
-
+</center>
 
 아래는 aiset에 대한 일부 코드이다.
 
@@ -372,5 +381,32 @@ public void aiset(int i)
 
 ## 추가
 
-### 개발 과정 일부 사진
+### 개발 과정
 
+#### 주변 타일 탐색 기능 개발
+
+주변 타일을 검색하는 기능을 구현하는 과정에서 촬영된 영상이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/text_indexingerror.gif?raw=true" width="400">
+</center>
+
+
+
+#### 초기 플레이어 디자인
+
+초기에 이 게임을 제작할 때는, 기하학적인 무늬를 적용한 말 디자인을 생각하였다. 이를 바탕으로 디자인을 진행해 게임에 적용하였으나, 생각했던 것보다 플레이어의 말이 통일감을 주지 못하고, 시선을 분산시켜 폐기하게 되었다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/protoversion.gif?raw=true" width="400">
+</center>
+
+
+
+#### 최초 테스트
+
+밑의 영상은 앱을 실제로 빌드하여, 갤럭시 노트9에서 플레이한 것을 촬영한 것이다. 메인 페이지, 게임의 종료도 구현되지 않고 단순히 게임 진행만 가능한 상태로, 터치 오류 등을 찾기 위해 진행하였다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/gametest.gif?raw=true" width="400">
+</center> 
