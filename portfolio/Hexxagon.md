@@ -213,14 +213,12 @@ public void map(int i)
 위처럼 주변 타일 정보를 가져오면, 예외처리를 해줘야 하는 부분이 발생합니다. 아래 사진처럼, 18번 타일을 눌렀을 때, 멀리 있는 17번 타일에 파란 가이드가 활성화되게 되는 것이다. 이는 게임판 상에서는 서로 멀리 떨어져있기 때문에 활성화되지 않아야 하지만, 1차원 배열로 타일을 나열했기에 발생한 문제이다. 
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/spaceerror.gif?raw=true" width="500">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/spaceerror.gif?raw=true" width="400">
 </center>
 
 
 
 이를 해결하기 위하여 타일 사이의 거리를 활용하였다. 단순하게 현재 클릭한 타일과 일정 거리 이상이 되면 가이드를 활성화하지 않도록 처리하였다.
-
-[원형으로 영역 잡아서 어디까지 활성화되는지 보이게 하는 그림 하나]
 
 
 
@@ -302,7 +300,7 @@ AI는 기본적으로 본인이 할 수 있는 모든 경우의 수를 계산한
 아래 영상은 적절한 수준의 ai와 대결 시연을 진행한 영상이다.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/maintest.gif?raw=true" width="500">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/maintest.gif?raw=true" width="400">
 </center>
 
 
@@ -312,10 +310,11 @@ AI는 기본적으로 본인이 할 수 있는 모든 경우의 수를 계산한
 AI가 각 상황에 부여하는 가중치를 변경함으로써 AI의 난이도를 설정할 수 있다.  아래 사진은, 동일한 상황에 대해 AI의 다른 반응을 테스트한 것으로, 가중치에 따라 AI의 행동양상이 크게 달라짐을 볼 수 있다.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aidif1.gif?raw=true" width="500">
-	<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aidif2.gif?raw=true" width="500">
-
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aidif1.gif?raw=true" width="300">
+	<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Hexxagon/aidif2.gif?raw=true" width="300">
 </center>
+
+
 
 아래는 aiset에 대한 일부 코드이다.
 
