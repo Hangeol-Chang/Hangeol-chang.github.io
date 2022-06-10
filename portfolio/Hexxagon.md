@@ -16,7 +16,7 @@ description: >
 
 
 
-[ develop_youtube ]{:.heading.flip-title} -- 개발과정 유튜브 링크
+- [ develop_youtube ]{:.heading.flip-title} -- 개발과정 유튜브 링크
 
 [develop_youtube ]: https://www.youtube.com/watch?v=jfQ35B7fGc0&list=PLghOZn1LvD2No6V2XVAvCAHQgyeea9G43
 

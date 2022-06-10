@@ -1,15 +1,14 @@
 ---
 layout: post
-title: [html방탈출] HTML ESCAPE introduction
-description: >
-  html escape 프로젝트를 만들기 시작하며, 생각하고 있던 것들으 마구 뱉어내는 글
+title: .[HTML 방탈출] HTML ESCAPE introduction
 hide_last_modified: true
 ---
 
+>   html escape 프로젝트를 만들기 시작하며, 생각하고 있던 것들으 마구 뱉어내는 글
+
 react를 이용하여 html 방탈출을 제작할 것이다. html방탈출이 도대체 뭐냐고? 그건 결과물을 기대하시라!!
 
-
-
+0. 목차
 {:toc}
 
 ## 개요
