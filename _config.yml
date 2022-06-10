@@ -90,9 +90,9 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 # 로컬에서 테스트 할 때는 이걸 살리고,
-theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
 # 깃에 커밋할 때는 이게 살아있어야 함.
-# remote_theme: hydecorp/hydejack@v9
+remote_theme: hydecorp/hydejack@v9
 
 
 # Customizaton
