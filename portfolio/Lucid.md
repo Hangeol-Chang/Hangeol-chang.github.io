@@ -43,6 +43,10 @@ description: >
 
 플레이어의 점프와 이단 점프는 canjump, candoublejump라는 boolean 형태의 변수로 관리된다. 땅에 닿아 있을 때 canjump가 true형태로 존재하며, 점프 키를 눌렀을 때 false로 변환한다. 동시에 candoublejump를 활성화하고, 점프 키를 눌렀을 때 doublejump 함수를 호출한다.
 
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/doublejump.gif?raw=true" width="600">
+</center>
+
 ```c#
 if (Input.GetKeyDown(KeyCode.LeftAlt))
 {
@@ -55,11 +59,21 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 
 #### 밧줄 이동
 
-플레이어가 밧줄을 탈 때, 전용 애니메이션을 호출하며, 밧줄을 타고 상하로 이동이 가능하여야 한다. 이를 위하여 우선 맵 오브젝트에서, 밧줄들에 별도로 트리거 형태의 콜라이더를 달아주었다. 이를 통해 플레이어가 밧줄과 겹친 상태로
+플레이어가 밧줄을 탈 때, 전용 애니메이션을 호출하며, 밧줄을 타고 상하로 이동이 가능하여야 한다. 이를 위하여 우선 맵 오브젝트에서, 밧줄들에 별도로 트리거 형태의 콜라이더를 달아주었다. 이를 통해 플레이어가 밧줄과 겹친 상태로 위 방향키를 눌렀을 때 플레이어에게 적용되어 있는 중력효과를 제거하고, 애니메이션을 강제로 밧줄을 타는 모션으로 전환합니다.
+
+플레이어가 밧줄을 타는 도중에는, 상단의 플랫폼으로 이동하기 위해서, 상단의 플랫폼과 충돌하지 않고 통과하여야 한다. 이를 위해 플레이어의 머리부분에 원형의 콜라이더를 추가하여, 이 콜라이더와 플랫폼이 접촉할 경우 플레이어의 콜라이더를 트리거로 변경하도록 설정하였다.{:.note}
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rope_underjump.gif?raw=true" width="600">
+</center>
 
 
 
-#### 하단점프, 플랫폼 간 이동
+#### 하단점프
+
+플레이어가 아래 방향키를 누른 채로 점프키를 입력하면, 현재 서있는 플랫폼을 통과하여, 아래 플랫폼에 착지하여야 한다. 이를 위해서, 아래 방향키와 점프키가 같이 입력되면, 플레이어의 콜라이더를 트리거로 변경한다. 이후 낙하상태에서, 플레이어의 상단에 있는 원형 콜라이더가 플랫폼을 통과하면, 다시 플레이어의 콜라이더를 작동시키고, 아래 플랫폼은 통과하지 않고 착지하게 한다.
+
+
 
 
 
