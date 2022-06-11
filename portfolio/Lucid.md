@@ -100,7 +100,7 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 키다운 동안 애니메이션을 반복해야 하고, 반복하는 동안 지속적으로 화살을 발사해야 한다. 이를 구현하기 위해, 속사기 자체를 하나의 오브젝트로 제작하였다.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/playerstructure.png?raw=true" width="600">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/playerstructure.png?raw=true" width="300">
 </center>
 
 스킬키를 누르고 있을 때 스킬 오브젝트(rapidfire_body)를 활성화하며, 이 오브젝트는 일정 시간 단위로 화살을 발사한다. 발사된 화살은 다시 별개로 오브젝트로 취급되며, 1초간 날아간 뒤 소멸한다.
@@ -131,11 +131,12 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 
 ##### 주력기
 
-
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rapid1.gif?raw=true" width="400">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rapid2.gif?raw=true" width="400">
+</center>
 
 위 사진의 왼쪽은 최초 구현하였던 주력기 스킬의 모션이다. 화살과 나비가 하나의 에셋으로 묶여 날아가도록 설계하였지만, 실제 적용해보았을 때 굉장히 어색한 움직임을 보이는 것을 확인하였다.
-
-
 
 이를 오른쪽 사진처럼 개선하였다. 나비와 화살을 분리하고, 나비의 경우 생성될 때는 느린 속도로 출발하여, Addforce를 이용하여 가속되도록 만들었다.
 
@@ -160,7 +161,7 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 아래 사진은 유니티엔진 상에서 화살 오브젝트가 활성, 비활성화 되는 것을 테스트해본 것이다.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/objectpulling.gif?raw=true" width="700">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/objectpulling.gif?raw=true" width="600">
 </center>
 
 
@@ -198,3 +199,10 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 
 - 스킬의 경우, 하나의 인터페이스를 만들어 모든 스킬에 상속시킨다.
   - 이렇게 제작할 시, 몬스터 등 스킬의 피격을 처리해야 할 때, 스킬 인터페이스를 넘겨받아 한번에 데이터를 처리할 수 있게 된다.
+
+
+
+## 추가
+
+구현 중 발생했던 버그들
+

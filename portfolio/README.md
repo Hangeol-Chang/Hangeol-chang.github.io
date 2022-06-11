@@ -214,7 +214,9 @@ permalink: /portfolio/
 
 - 위의 사진을 보면, 나비와 화살이 날라가는 것을 볼 수 있다. 게임을 진행하는 데에 있어서, 이같은 오브젝트의 생성, 삭제를 반복하는 것은 **외부 메모리 단편화**의 원인이 된다. 이를 해결하기 위해 **오브젝트 풀링**을 적용하였다.
 
-[오브젝트 풀링 관련 사진]
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/objectpulling.gif?raw=true" width="500">
+</center>
 
 
 
