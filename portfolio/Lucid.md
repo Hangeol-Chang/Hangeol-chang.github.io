@@ -109,15 +109,21 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 
 #### 사냥기
 
-
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flowerbomb.gif?raw=true" width="600">
+</center>
 
 #### 사출기
 
-
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim_final.gif?raw=true" width="600">
+</center>
 
 #### 특수자원
 
-
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/resource.gif?raw=true" width="600">
+</center>
 
 
 
@@ -136,17 +142,20 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rapid2.gif?raw=true" width="400">
 </center>
 
-위 사진의 왼쪽은 최초 구현하였던 주력기 스킬의 모션이다. 화살과 나비가 하나의 에셋으로 묶여 날아가도록 설계하였지만, 실제 적용해보았을 때 굉장히 어색한 움직임을 보이는 것을 확인하였다.
+위 사진의 왼쪽(위쪽)은 최초 구현하였던 주력기 스킬의 모션이다. 화살과 나비가 하나의 에셋으로 묶여 날아가도록 설계하였지만, 실제 적용해보았을 때 굉장히 어색한 움직임을 보이는 것을 확인하였다.
 
-이를 오른쪽 사진처럼 개선하였다. 나비와 화살을 분리하고, 나비의 경우 생성될 때는 느린 속도로 출발하여, Addforce를 이용하여 가속되도록 만들었다.
+이를 오른쪽(아래쪽) 사진처럼 개선하였다. 나비와 화살을 분리하고, 나비의 경우 생성될 때는 느린 속도로 출발하여, Addforce를 이용하여 가속되도록 만들었다.
 
 
 
 ##### 사출기
 
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim1.gif?raw=true" width="400">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim2.gif?raw=true" width="400">
+</center>
 
-
-위 사진은 최초 구현하였던 사출기 스킬의 모션이다. 푸른색 나비가 포물선 모양을 
+위 사진의 왼쪽(위쪽)은 최초 구현하였던 사출기 스킬의 모션이다. 푸른색 나비가 포물선 모양을 그리며 적에게 향하는 것을 볼 수 있다. 이를 유저 커뮤니티에 게시하였을 때, 나비의 움직임이라기에는 부자연스럽다는 의견이 많았다. 
 
 
 
