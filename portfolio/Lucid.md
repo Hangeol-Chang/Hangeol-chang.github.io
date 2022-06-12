@@ -102,22 +102,73 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/playerstructure.png?raw=true" width="300">
 </center>
-
 스킬키를 누르고 있을 때 스킬 오브젝트(rapidfire_body)를 활성화하며, 이 오브젝트는 일정 시간 단위로 화살을 발사한다. 발사된 화살은 다시 별개로 오브젝트로 취급되며, 1초간 날아간 뒤 소멸한다.
+
+스킬 오브젝트가 플레이어의 하위 오브젝트여서, 플레이어가 스킬을 사용하는 중에 바라보는 방향을 전환하면, 스킬이펙트가 같이 방향을 전환하게 된다. 이 때, 이미 발사된 화살과 나비는 플레이어의 방향에 영향을 받이 않아야 한다. 따라서, 플레이어의 자식으로 화살 객체가 생성되는 것이 아니라, 별도의 객체로 생성하였다. 아래는 객체들이 생성되는 구조이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/playerstructure2.png?raw=true" width="300">
+</center>
+
+아래 사진은 구현된 주력기 스킬의 테스트 사진이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/rapid2.gif?raw=true" width="600">
+</center>
 
 
 
 #### 사냥기
 
+사냥기는 비교적 넓은 범위에 있는 다수의 몬스터를 공격하는 기술이다. 실제 메이플스토리의 루시드 보스몬스터의 패턴에서 에셋을 추출하여 사용하였다. 아래는 추출한 이미지이다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flower_bomb_full.png?raw=true" width="800">
+</center>
+
+위 이미지에서 하나의 꽃을 추출하여 정리하였으며, 이를 여러 색깔로 칠하여 사용할 에셋을 완성하였다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flower_bomb.png?raw=true" width="800">
+</center>
+
+스킬은 꽃이 핀 후, 터지는 듯한 느낌으로 제작하였으며, 3개의 큰 꽃과, 9개의 작은 꽃으로 구성된다. 스킬을 사용하는 데에 있어 지루함을 줄이기 위해, 이 스킬에 사용되는 꽃의 색깔과 위치를 랜덤하게 생성되도록 하였다.
+
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flowerbomb.gif?raw=true" width="600">
 </center>
 
+기본적으로는 플레이어를 기준으로 대각선 위 방향으로 꽃이 생성되며, 처음 생성되는 보라색 꽃을 기준으로, 일정 범위 안에서 랜덤한 위치에, 랜덤한 색으로 꽃들이 생성되게 된다. 일정한 시간 간격을 두고 생성된 꽃들은 다시 일정한 시간 간격으로 폭발하게 되며, 몬스터에게 대미지를 줄 수 있다.
+
+꽃이 생성되는 위치가 일정하지 않기 때문에, 이 스킬의 히트박스는 꽃에게 적용할 수 없었다. 따라서 이 스킬의 히트박스는 생성되는 에셋과는 별개로 작성되었다. 히트박스에도 애니메이션을 적용하여 작은 히트박스가 점점 커지며 범위 안에 포함되는 몬스터를 타격한다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flowerbomb_animation.png?raw=true" width="600">
+</center>
+
+아래 사진에서, 초록색 사각형(스킬의 콜라이더)가 확장되는 것을 단편적으로 확인하고 있다.
+
+<center>
+	<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flowerbombtest.gif?raw=true" width="600">
+</center>
+
+
+
 #### 사출기
+
+스킬로 몬스터에게 타격을 가할 때, 일정 확률로 적을 추가 타격할 수 있는 나비가 사출된다. 
+
+이 나비를 사출하는 메서드는 몬스터에게 포함되어 있다. 몬스터가 스킬에 피격되었을 때, 플레이어에게로 몬스터 정보를 전달한다. 당시에 이렇게 코드를 작성한 이유는, 생성된 나비가 몬스터를 향해 날아가기 위해 몬스터의 위치 정보가 필요하기 때문이다.<br>하지만, 코드의 독립성적인 측면에서 보았을 때, 이는 명백히 옳지 않은 구조이다. 지금 다시 개발한다면, 이 나비를 사출하는 메서드를 스킬이펙트 인터페이스에 포함하고, 각종 스킬이펙트에서 상속받아서 사용하게 제작할 수 있을 것 같다.{:.note}
+
+나비는 사출되면, 플레이어의 상하로 퍼지게 된다. 한 번 강한 힘을 받아 사출된 뒤 속도가 느려지고, 일정 시간 후에 몬스터를 향해 직선으로 날아가게 된다.
 
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim_final.gif?raw=true" width="600">
 </center>
+
+만약 나비가 사출되었으나, 타겟인 몬스터가 죽어서 존재하지 않는 상태가 되면, 나비는 자동으로 사라지도록 설계하였다. 이 부분에서 나비가 사라지지 않고 새로운 몬스터를 찾는 것도 고려하였지만, 수십 개의 나비가 한번에 find메서드를 사용하는 것이, 자원 효율적인 츠면에서 매우 좋지 않다고 생각하여 이처럼 처리하게 되었다.
+
+
 
 #### 특수자원
 
@@ -177,7 +228,9 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 
 ### 몬스터
 
-
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/monster.gif?raw=true" width="600">
+</center>
 
 
 
@@ -213,5 +266,25 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 
 ## 추가
 
-구현 중 발생했던 버그들
+구현 과정에서 발생했던 버그들 중 일부와, 그 원인에 대해 적고자 한다.
+
+
+
+나비 무한 사출 문제.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/mechanicbug.gif?raw=true" width="700">
+</center>
+
+특수자원이 다 채워졌을 때 사출되는 붉은 나비가 무한이 사출된다. 이 버그는 붉은 나비가 특수자원을 채워주기 때문에 발생한 문제이다. 테스트를 위해 특수자원이 빠르게 채워지도록 설정해 두었는데, 이 때문에 붉은 나비가 피격했을 시 특수자원이 400% 이상 채워지게 되어 사출되었던 것의 4배의 붉은 나비가 사출되게 된다.이 과정이 반복되어 무한이 나비가 사출되는 문제가 발생하였다.
+
+
+
+스킬이펙트 반복 문제.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/reverseshooting.gif?raw=true" width="700">
+</center>
+
+오브젝트풀링을 구현하는 과정에서 발생한 문제이다. 한 번 생성된 오브젝트가 소멸될 때 사라지지 않고, 반복해서 생성되는 문제가 발생하였다.
 
