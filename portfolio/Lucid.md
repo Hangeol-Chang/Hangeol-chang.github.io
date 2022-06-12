@@ -146,7 +146,7 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flowerbomb_animation.png?raw=true" width="600">
 </center>
 
-아래 사진에서, 초록색 사각형(스킬의 콜라이더)가 확장되는 것을 단편적으로 확인하고 있다.
+아래 사진에서, 초록색 사각형(스킬의 콜라이더)가 확장되는 것을 단편적으로 확인할 수 있다.
 
 <center>
 	<img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/flowerbombtest.gif?raw=true" width="600">
@@ -166,17 +166,27 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim_final.gif?raw=true" width="600">
 </center>
 
-만약 나비가 사출되었으나, 타겟인 몬스터가 죽어서 존재하지 않는 상태가 되면, 나비는 자동으로 사라지도록 설계하였다. 이 부분에서 나비가 사라지지 않고 새로운 몬스터를 찾는 것도 고려하였지만, 수십 개의 나비가 한번에 find메서드를 사용하는 것이, 자원 효율적인 츠면에서 매우 좋지 않다고 생각하여 이처럼 처리하게 되었다.
+만약 나비가 사출되었으나, 타겟인 몬스터가 죽어서 존재하지 않는 상태가 되면, 나비는 자동으로 사라지도록 설계하였다. 이 부분에서 나비가 사라지지 않고 새로운 몬스터를 찾는 것도 고려하였지만, 수십 개의 나비가 한번에 find메서드를 사용하는 것이, 자원 효율적인 측면에서 매우 좋지 않다고 생각하여 이처럼 처리하게 되었다.
+
+
+
+또한, 나비에는 파티클 시스템이 적용되었다. 나비가 날아가는 것에 몽환적인 느낌을 주기 위해 추가하였으며, 나비가 지나간 길에 거의 정지상태의 파티클을 뿌리도록 설정하였다.
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/particlemaking.gif?raw=true" width="600">
+</center>
 
 
 
 #### 특수자원
 
+루시드는 기존의 캐릭터에 기본적으로 적용되는 hp, mp 이외에 전용 특수자원을 활용한다. 이 게이지는 특수한 스킬을 사용할 때 충전되며 아래 사진의 오른쪽 드림캐쳐의 원형 테두리에 보라색으로 차오르는 것을 확인할 수 있다.
+
+게이지가 전부 차오르면, 게이지를 0으로 초기화하고 특수 공격기를 자동으로 사용한다. 이 특수 공격기는 붉는 나비 형태의 사출기로, 한번에 30마리가 사출되어 적을 향해 날아간다.
+
 <center>
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/resource.gif?raw=true" width="600">
 </center>
-
-
 
 
 
@@ -205,8 +215,9 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim1.gif?raw=true" width="400">
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/wim2.gif?raw=true" width="400">
 </center>
-
 위 사진의 왼쪽(위쪽)은 최초 구현하였던 사출기 스킬의 모션이다. 푸른색 나비가 포물선 모양을 그리며 적에게 향하는 것을 볼 수 있다. 이를 유저 커뮤니티에 게시하였을 때, 나비의 움직임이라기에는 부자연스럽다는 의견이 많았다. 
+
+이 의견을 반영하여 오른쪽(아래쪽) 사진처럼 움직임을 수정하였다. 수정된 움직임에서는 나비가 최초 일정한 양의 힘을 받아서 사출된 후에, 급격하게 속도가 감소하고, 적을 향해 가속을 받으며 날아간다.
 
 
 
@@ -273,18 +284,29 @@ if (Input.GetKeyDown(KeyCode.LeftAlt))
 나비 무한 사출 문제.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/mechanicbug.gif?raw=true" width="700">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/mechanicbug.gif?raw=true" width="600">
 </center>
+
 
 특수자원이 다 채워졌을 때 사출되는 붉은 나비가 무한이 사출된다. 이 버그는 붉은 나비가 특수자원을 채워주기 때문에 발생한 문제이다. 테스트를 위해 특수자원이 빠르게 채워지도록 설정해 두었는데, 이 때문에 붉은 나비가 피격했을 시 특수자원이 400% 이상 채워지게 되어 사출되었던 것의 4배의 붉은 나비가 사출되게 된다.이 과정이 반복되어 무한이 나비가 사출되는 문제가 발생하였다.
 
 
 
-스킬이펙트 반복 문제.
+스킬이펙트 비활성화 문제.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/reverseshooting.gif?raw=true" width="700">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/reverseshooting.gif?raw=true" width="600">
 </center>
+
 
 오브젝트풀링을 구현하는 과정에서 발생한 문제이다. 한 번 생성된 오브젝트가 소멸될 때 사라지지 않고, 반복해서 생성되는 문제가 발생하였다.
 
+
+
+파티클 사이즈 조절 실패
+
+<center>
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/particlebug.gif?raw=true" width="600">
+</center>
+
+버그라기보다는 개발 과정에서 파티클의 동작을 확인하는 과정이었지만, 재밌는 사진이라고 생각하여 추가해봤다. 파티클의 크기와 패턴을 수정하지 않고 실행시켰을 때, 위와 같이 매우 큰 파티클들을 만나게 되었다.
