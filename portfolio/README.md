@@ -230,6 +230,7 @@ permalink: /portfolio/
     <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/monster.gif?raw=true" width="500">
 </center>
 
+
 #### 데미지 표현
 
 - 이 게임의 데미지 표시는 TextMeshPro를 이용하였다.
