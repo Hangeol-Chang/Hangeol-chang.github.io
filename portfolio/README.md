@@ -227,7 +227,7 @@ permalink: /portfolio/
 - 공중에 있는 발판에서 몬스터가 떨어지지 않도록 하여야 했다. 이를 위해 몬스터에 작은 원형 트리거를 추가하여서, 몬스터가 발판과 닿고있는지 여부를 판단하고, 발판을 벗어나면 방향을 바꾸도록 하였다.
 
 <center>
-    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/moster.gif?raw=true" width="500">
+    <img src="https://github.com/Hangeol-Chang/Hangeol-chang.github.io/blob/main/assets/img/portfolio/Lucid/monster.gif?raw=true" width="500">
 </center>
 
 #### 데미지 표현
